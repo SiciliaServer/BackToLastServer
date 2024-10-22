@@ -7,10 +7,17 @@
 
 name: Gradle Package
 
-on:
-  release:
-    types: [created]
-
+ on: 
+   workflow_dispatch: 
+     inputs: 
+       logLevel: 
+         description: 'Log level' 
+         required: true 
+         default: 'warning' 
+   push: 
+     branches: [ "*" ] 
+   pull_request: 
+     branches: [ "*" ] 
 jobs:
   build:
 
