@@ -49,10 +49,5 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: jar-files
-        path: target/*.jar
-
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: jar-files
         path: build/libs/*.jar
+
